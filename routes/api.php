@@ -21,7 +21,7 @@ Route::post('login', [AuthController::class, 'login']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
     Route::get('/companies', [AuthController::class, 'getCompany']);
-    Route::get('/empolyees', [AuthController::class, 'getEmployee']);
+    Route::get('/employees', [AuthController::class, 'getEmployee']);
 
     Route::get('/companies/{id}', [AuthController::class, 'showCompany']);
     Route::post('/create/companies', [AuthController::class, 'storeCompany']);
